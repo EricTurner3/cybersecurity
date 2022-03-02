@@ -1,7 +1,7 @@
 # HackTheBox
 
 * My Profile: [cyberic](https://app.hackthebox.com/profile/677503)
-
+* Note: Just because I completed a challenge, there may not be any custom code. I started this repo on 2 Mar 2022, well after I started HTB. I may retroactively add code snippets here but it will take time.
 
 # Progress
 
